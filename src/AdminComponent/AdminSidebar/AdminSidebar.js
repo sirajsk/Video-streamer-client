@@ -1,6 +1,7 @@
+
 import React from 'react';
 import {useNavigate} from 'react-router-dom'
-import './_sidebar.scss'
+import '../../_app.scss'
 import {
     MdSubscriptions,
     MdExitToApp,
@@ -10,7 +11,7 @@ import {
     MdHome,
     // MdSentimentDissatisfied,
  } from "react-icons/md"
-export default function Sidebar({ sidebar, handleToggleSidebar }) {
+export default function AdminSidebar({ sidebar, handleToggleSidebar }) {
    const Navigate=useNavigate()
   return (
 
