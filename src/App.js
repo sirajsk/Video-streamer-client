@@ -6,7 +6,9 @@ import './App.css';
 import Dashboard from './AdminScreen/AdminDashboard/Dashboard'
 import HomeScreen from './Screens/homeScreen/HomeScreen';
 import LikedVideos from './Screens/LikedVideos/LikedVideo'
+import UserLogin from './Screens/UserLogin/Login'
 import "./_app.scss"
+import SignUp from './components/Signup/Signup';
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
              <Route path='/LikedVideo'  element={<LikedVideos /> } />
              <Route path='/admin/login'  element={<LoginScreen /> } />
              <Route path='/admin'  element={<Dashboard /> } />
+             <Route path='/login'  element={<UserLogin /> } />
+             <Route path='/signup'  element={<SignUp /> } />
               
         
         </Routes>

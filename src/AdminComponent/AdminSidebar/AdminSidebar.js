@@ -2,6 +2,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom'
 import '../../_app.scss'
+import '../../AdminComponent/AdminSidebar/AdminSidebar.scss'
 import {
     MdSubscriptions,
     MdExitToApp,
@@ -16,35 +17,35 @@ export default function AdminSidebar({ sidebar, handleToggleSidebar }) {
   return (
 
     <nav
-    className={sidebar ? "sidebar open" : "sidebar"}
+    className={sidebar ? "sidebarr open" : "sidebarr"}
     onClick={() => handleToggleSidebar(false)}>
-    <li onClick={()=>Navigate('/')}>
+       <div style={{marginTop:50}}> 
+
+    <li onClick={()=>Navigate('/admin')}>
        <MdHome size={23} />
-       <span>Home</span>
+       <span>Dashboard</span>
     </li>
     <li>
        <MdSubscriptions size={23} />
-       <span>Subscriptions</span>
+       <span>Users</span>
     </li>
 
-    <li onClick={()=>Navigate('/LikedVideo')}>
+    <li onClick={()=>Navigate('/admin')}>
        <MdThumbUp size={23} />
-       <span>Liked Videos</span>
+       <span>Prime Management</span>
     </li>
 
     <li>
        <MdHistory size={23} />
-       <span>History</span>
+       <span>Add Section</span>
     </li>
 
     <li>
        <MdLibraryBooks size={23} />
-       <span>Library</span>
+       <span>Report</span>
     </li>
-    {/* <li>
-       <MdSentimentDissatisfied size={23} />
-       <span>I don't Know</span>
-    </li> */}
+   
+    
 
     <hr />
 
@@ -54,6 +55,7 @@ export default function AdminSidebar({ sidebar, handleToggleSidebar }) {
     </li>
 
     <hr />
+       </div>
  </nav>
       )
 }

@@ -29,7 +29,7 @@ export default function Header({ handleToggleSidebar }) {
         <div className="header__icons" style={{marginLeft:20}}>
             <MdNotifications size={28} />
             {/* <MdApps size={28} /> */}
-            <MdInput size={29} onClick={()=>Navigate('/videoPlay')}/>
+            <MdInput size={29} onClick={()=>Navigate('/login')}/>
             <img 
                 src="https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"
                 alt="avatar"

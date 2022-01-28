@@ -5,6 +5,7 @@ import Video from '../../components/Video/Video';
 import Header from '../../components/header/Header';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import "../../_app.scss"
+import './homescreen.scss'
 
 
 export default function HomeScreen() {
@@ -18,8 +19,9 @@ export default function HomeScreen() {
             <div className='app__container'>
             <Sidebar sidebar={sidebar} handleToggleSidebar={handleToggleSidebar} />
 
+            {/* <div className='videos'> */}
 
-            <Container > 
+            <Container  className='videos'> 
                 <Categories />
                 <Row >
                     {[...new Array(8)].map(() => (
@@ -29,7 +31,8 @@ export default function HomeScreen() {
                     ))}
                 </Row>
             </Container>
-           </div>
+            </div>
+           {/* </div> */}
         </>
     )
 }

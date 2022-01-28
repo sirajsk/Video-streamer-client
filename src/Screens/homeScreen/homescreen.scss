@@ -1,0 +1,17 @@
+@import "../../base.scss";
+.videos{
+    margin-left: 230px !important;
+    // background-color: aliceblue;
+}
+
+@media(max-width:$breakpoint-medium){
+.videos{
+    margin-left: 100px !important;
+}
+}
+@media (max-width: $breakpoint-small) {
+    .videos{
+        margin-left: 0!important;
+    }
+}
+

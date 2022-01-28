@@ -1,25 +1,26 @@
 @import "../../_base.scss";
 
-.sidebar {
-   // position: -webkit-sticky;
+.sidebarr {
+   position: -webkit-sticky;
 
-   position: fixed;
-
-   // top: 10vh;
+   // position: fixed;
+   top: 10vh;
    // z-index: 999;
-   background: $black-secondery;
+//    background: "#CBCACA";
+    background-color: #054C92;
+    color: #BDE5E7;
 
    display: flex;
    flex-direction: column;
 
-   width: 230px;
-   height: 100%;
+   width: 250px;
+   height: 670px;
    padding-top: 2rem;
    transition: transform 0.2s ease-in;
    li {
       display: flex;
       align-items: center;
-
+        // margin-top: 23px;
       padding: 0.6rem 1.5rem;
       margin: 0.2rem 0;
       cursor: pointer;
@@ -47,7 +48,7 @@
 }
 
 @media (max-width: $breakpoint-medium) {
-   .sidebar {
+   .sidebarr {
       width: 90px;
       li {
          justify-content: center;
@@ -58,7 +59,7 @@
    }
 }
 @media (max-width: $breakpoint-small) {
-   .sidebar {
+   .sidebarr {
       transform: translateX(-100%);
 
       position: fixed;
