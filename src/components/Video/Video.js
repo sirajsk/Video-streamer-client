@@ -6,7 +6,7 @@ export default function Video() {
     <div className='video'>
     <div className='video__top'>
        <img
-          src='https://i.ytimg.com/vi/hB-RwVQYgrw/hqdefault.jpg?s…j0AgKJDeAE=&rs=AOn4CLD1d0bA6FDWzIae7Z4Vv_nzVa8eUw'
+          src='https://i.ytimg.com/vi/uc3vwpNM-aQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB0V1VuAZrHPekKxJgYNNKOt8p8vA'
           alt=''
        />
        <span>05:43</span>

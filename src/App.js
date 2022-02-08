@@ -9,6 +9,8 @@ import LikedVideos from './Screens/LikedVideos/LikedVideo'
 import UserLogin from './Screens/UserLogin/Login'
 import "./_app.scss"
 import SignUp from './components/Signup/Signup';
+import VideoUpload from './Screens/VideoUpload/VideoUpload';
+import Profile from './Screens/Profile/Profile';
 
 function App() {
 
@@ -22,6 +24,8 @@ function App() {
              <Route path='/admin'  element={<Dashboard /> } />
              <Route path='/login'  element={<UserLogin /> } />
              <Route path='/signup'  element={<SignUp /> } />
+             <Route path='/upload'  element={<VideoUpload /> } />
+             <Route path='/profile'  element={<Profile /> } />
               
         
         </Routes>

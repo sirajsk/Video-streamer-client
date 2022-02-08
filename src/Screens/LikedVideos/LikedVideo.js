@@ -15,7 +15,7 @@ export default function LikedVideos() {
             <Sidebar sidebar={sidebar} handleToggleSidebar={handleToggleSidebar} />
 
 
-            <Container > 
+            <Container className='videos'> 
                 <Categories />
                 <Row >
                     {[...new Array(1)].map(() => (
