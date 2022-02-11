@@ -1,8 +1,8 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './_header.scss'
 import { FaBars } from "react-icons/fa"
 import { AiOutlineSearch } from "react-icons/ai"
-import { MdNotifications,MdUploadFile } from "react-icons/md"
+import { MdNotifications, MdUploadFile } from "react-icons/md"
 import { useNavigate } from 'react-router-dom'
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -18,12 +18,12 @@ export default function Header({ handleToggleSidebar }) {
     };
     const Navigate = useNavigate()
     useEffect(() => {
-   
-      return () => {
-      
-      };
+
+        return () => {
+
+        };
     }, [Navigate]);
-    
+
     return <div className="header">
         <FaBars
             className="header__menu"
@@ -34,9 +34,9 @@ export default function Header({ handleToggleSidebar }) {
         <div
 
             className="header__logo"
-        ><h2 onClick={() => Navigate('/')} style={{color:"red"}}>Tube</h2></div>
+        ><h2 onClick={() => Navigate('/')} style={{ color: "red" }}>Tube</h2></div>
 
-        <form> 
+        <form>
             <input type="text" placeholder="Search" />
             <button type="submit">
                 <AiOutlineSearch size={22} />
@@ -60,10 +60,10 @@ export default function Header({ handleToggleSidebar }) {
                 }}
             >
 
-                <MenuItem onClick={()=>{handleClose();Navigate('/profile');}}> Profile</MenuItem>
+                <MenuItem onClick={() => { handleClose(); Navigate('/profile'); }}> Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={()=>{handleClose();Navigate('/login');}}>Login</MenuItem>
-               
+                <MenuItem onClick={() => { handleClose(); Navigate('/login'); }}>Login</MenuItem>
+
             </Menu>
         </div>
     </div>

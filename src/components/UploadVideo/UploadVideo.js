@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -10,19 +10,9 @@ import Button from '@mui/material/Button';
 import Banner from '../Assets/V.svg';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import { styled } from '@mui/material/styles';
 import Skeleton from '@mui/material/Skeleton';
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-        •
-    </Box>
-);
-const Input = styled('input')({
-    display: 'none',
-});
+
+
 var cardStyle = {
     display: 'block',
     marginTop: 25,
@@ -69,6 +59,7 @@ export default function UploadVideo() {
                         <Button variant="contained" component="span" onClick={handleOpen}>
                             Upload video
                         </Button>
+                       
                         <Modal
                             aria-labelledby="transition-modal-title"
                             aria-describedby="transition-modal-description"
@@ -89,12 +80,7 @@ export default function UploadVideo() {
                                     <TextField id="outlined-basic" label="Outlined" variant="outlined" />
                                 </Box>
                             </Fade>
-                            {/* <label htmlFor="contained-button-file">
-                                <Input accept="image/*" id="contained-button-file" multiple type="file" />
-                                <Button variant="contained" component="span">
-                                    Upload
-                                </Button>
-                            </label> */}
+                          
                         </Modal>
                     </CardActions>
                 </React.Fragment></Card>

@@ -11,7 +11,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
-
+import {GoogleAuth,userLogin} from '../../Api/UserApi'
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Alert from '@mui/material/Alert';
@@ -36,8 +36,8 @@ export default function UserLogin() {
       }
       axios.post('http://localhost:3001/api/login', Data).then((res) => {
 
-        Navigate('/')
         console.log(res);
+        Navigate('/')
       }).catch((err) => {
 
         console.log(err.response.data.error);
@@ -48,10 +48,23 @@ export default function UserLogin() {
 
   };
   const onSuccess = (response) => {
-    console.log(response);
+    // console.log(response.profileObj.email);
+    let Data=response.profileObj.email
+    axios.post('http://localhost:3001/api/Googlelogin', Data).then((res) => {
+
+        Navigate('/')
+        console.log(res);
+      }).catch((err) => {
+
+        console.log(err.response.data.error);
+        // setAlert(err.response.data.error)
+      })
+
+    console.log('on success')
   }
   const onFailure = (response) => {
     console.log(response);
+    console.log('on failour')
   }
 
   return (
@@ -121,7 +134,7 @@ export default function UserLogin() {
           </Box>
          
           <GoogleLogin
-            clientId="950267631889-tashqh6igf51v8u7me8ipi50cf8mg46i.apps.googleusercontent.com"
+            clientId="500296978406-8g7l7afe0r4v7jav85uvop84jspa6745.apps.googleusercontent.com"
             buttonText="Google Login"
             onSuccess={onSuccess}
             onFailure={onFailure}
